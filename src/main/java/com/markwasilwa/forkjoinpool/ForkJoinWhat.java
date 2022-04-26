@@ -1,4 +1,4 @@
-package ke.co.grammar;
+package com.markwasilwa.forkjoinpool;
 
 public class ForkJoinWhat {
     public static void main(String[] args) {

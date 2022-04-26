@@ -1,4 +1,4 @@
-package ke.co.grammar;
+package com.markwasilwa.forkjoinpool;
 
 import org.hamcrest.core.IsEqual;
 import org.junit.Assert;
