@@ -1,11 +1,12 @@
 package com.markwasilwa.forkjoinpool;
 
-import lombok.extern.slf4j.Slf4j;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -15,8 +16,8 @@ import java.util.Map;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveTask;
 
-@Slf4j
 public class ResponseLengthCalculator extends RecursiveTask<Map<String, Integer>> {
+    private static final Logger log = LoggerFactory.getLogger(ResponseLengthCalculator.class);
     private final List<String> links;
 
     public ResponseLengthCalculator(List<String> links) {

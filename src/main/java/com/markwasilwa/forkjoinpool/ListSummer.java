@@ -1,12 +1,13 @@
 package com.markwasilwa.forkjoinpool;
 
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.concurrent.RecursiveTask;
 
-@Slf4j
 public class ListSummer extends RecursiveTask<Integer> {
+    private static final Logger log = LoggerFactory.getLogger(ListSummer.class);
     private final List<Integer> listToSum;
 
     public ListSummer(List<Integer> listToSum) {
